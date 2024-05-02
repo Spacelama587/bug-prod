@@ -14,6 +14,7 @@ import Link from "next/link";
 import { buttonVariants } from "@/components/ui/button";
 import ReactMarkDown from "react-markdown";
 import DeleteButton from "./DeleteButton";
+import AssignTicket from "@/components/AssignTicket";
 
 
 interface Props {
@@ -59,7 +60,7 @@ const TicketDetail = ({ ticket, users }: Props) => {
         </CardFooter>
       </Card>
       <div className="mx-4 flex lg:flex-col lg:mx-0 gap-2">
-       
+       <AssignTicket ticket = {ticket} users= {users}/>
         <Link
           href={`/tickets/edit/${ticket.id}`}
           className={`${buttonVariants({
