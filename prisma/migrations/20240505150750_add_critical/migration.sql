@@ -1,2 +1,0 @@
--- AlterTable
-ALTER TABLE `ticket` MODIFY `priority` ENUM('LOW', 'MEDIUM', 'HIGH', 'CRITICAL') NOT NULL DEFAULT 'MEDIUM';
