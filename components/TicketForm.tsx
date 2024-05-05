@@ -30,7 +30,7 @@ const TicketForm = ({ ticket }: Props) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState("");
   const router = useRouter();
-
+ 
   const form = useForm<TicketFormData>({
     resolver: zodResolver(ticketSchema),
   });
@@ -135,6 +135,7 @@ const TicketForm = ({ ticket }: Props) => {
                       <SelectItem value="LOW">Low</SelectItem>
                       <SelectItem value="MEDIUM">Medium</SelectItem>
                       <SelectItem value="HIGH">High</SelectItem>
+                      <SelectItem value="CRITICAL">CRITICAL</SelectItem>
                     </SelectContent>
                   </Select>
                 </FormItem>
